@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <title>NETFLEXY Home Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="top-area">
+        <div class="NETFLEXY">NETFLEXY</div>
+    <div class="profile">
+        <a href="profile.html"><img src="Image/profileicon.png" width="50px" height="50px"></a>
+    </div>
+    <div class="welcomestate">Welcome <span id="username"></span>..!</div>
+
+    <div class="search-container">
+        <input type="search" id="searchFILM" placeholder="Search...">
+        <button type="button" onclick="search(getElementById('searchFILM').value)">Search</button>
+    </div>
+    </div>
+    <div id="overlay" class="overlay" onclick="closePopup()"></div>
+
+    <div id="Medialayer" class="player">
+       <h2>Media Player</h2>
+       <br>
+       <iframe width="660" height="415" src="https://www.youtube.com/embed/ovK4Ik3HIJI?autoplay=1" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe></div>
+    </div>
+    </div>
+
+    <div id="search" class="popup">
+        <h2><div id="searchFilmname"></div></h2>
+        <img id="searchFilm" src="" alt="Popup Image" style="max-width: 100%; height: auto;">
+        <p>IMBM 9.8 <br>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+        </p>
+        <button class="signIn-button" onclick="openPlayer()">Watch</button>
+        <button class="button1" onclick="openPlayer()">Trailer</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <h2><div id="filmname"></div></h2>
+        <img id="popupImage" src="" alt="Popup Image" style="max-width: 100%; height: auto;">
+        <p>IMBM 9.8 <br>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+            <span><img src="Image/StarIcon.png" style="width: 20px; height: 20px;"></span>
+        </p>
+        <button class="signIn-button" onclick="openPlayer()">Watch</button>
+        <button class="button1" onclick="openPlayer()">Trailer</button>
+    </div>
+    <div class="box"></div>
+    <table class="custom-table">
+        <tr>
+            <td class="tag">For you
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/Black Widow (2021).jpg"
+                                alt="Black Widow (2021)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/Extraction 2020.jpg" 
+                                alt="Extraction 2020"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/F9 The Fast Saga (2021).jpg"
+                                alt="F9 The Fast Saga (2021)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br>
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/John Wick.jpg"
+                                alt="John Wick"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/Mad Max Fury Road.jpg"
+                                alt="Mad Max Fury Road"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img id="forYou" class="film" src="Image/Action/Tenet (2020).jpg"
+                                alt="Tenet (2020)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Fantasy/Harry Potter and the Sorcerer's Stone.jpg"
+                                alt="Harry Potter and the Sorcerer's Stone"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br><div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Fantasy/The Green Knight (2021).jpg"
+                                alt="The Green Knight (2021)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br><div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Fantasy/The King's Man (2021).jpg"
+                                alt="The King's Man (2021)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br><div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Fantasy/The Lord of the Rings The Fellowship of the Ring.jpg"
+                                alt="The Lord of the Rings The Fellowship of the Ring"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br>
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Fantasy/The Witcher Nightmare of the Wolf (2021).jpg"
+                                alt="The Witcher Nightmare of the Wolf (2021)"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br>
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="film" src="Image/Action/Mad Max Fury Road.jpg"
+                                alt="Image/Action/Mad Max Fury Road"
+                                onclick="selectFilm(this,this.src,this.alt)">
+                                <br>
+                                <div class="forYouFilms"></div>
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Pupular
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Animation/Over the Moon (2020).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Comedy/Borat Subsequent Moviefilm (2020).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div  class="filmCard">
+                                <img class="popularFilm" src="Image/Drama/Judas and the Black Messiah (2021).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Horror/The Invisible Man (2020).jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Fantasy/The King's Man (2021).jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Romance/The Notebook.jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Animation/Over the Moon (2020).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Comedy/Borat Subsequent Moviefilm (2020).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Drama/Judas and the Black Messiah (2021).jpg">
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Horror/The Invisible Man (2020).jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Fantasy/The King's Man (2021).jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img class="popularFilm" src="Image/Romance/The Notebook.jpg">
+                                <br>
+                                <div class="popularYouFilms"></div>
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Thriller
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Gone Girl.jpg">
+                                <br>Gone Girl
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Shutter Island.jpg">
+                                <br>Shutter Island
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Spiral (2021).jpg">
+                                <br>Spiral (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/The Little Things.jpg">
+                                <br>
+                                The Little Things
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/The Mauritanian.jpg">
+                                <br>
+                                The Mauritanian
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image//Thriller/The Silence of the Lambs.jpg">
+                                <br>
+                                The Silence of the Lambs
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Gone Girl.jpg">
+                                <br>Gone Girl
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Shutter Island.jpg">
+                                <br>Shutter Island
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/Spiral (2021).jpg">
+                                <br>Spiral (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/The Little Things.jpg">
+                                <br>
+                                The Little Things
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Thriller/The Mauritanian.jpg">
+                                <br>
+                                The Mauritanian
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image//Thriller/The Silence of the Lambs.jpg">
+                                <br>
+                                The Silence of the Lambs
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Drama
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Forrest Gump.jpg">
+                                <br>Forrest Gump
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Judas and the Black Messiah (2021).jpg">
+                                <br>Judas and the Black Messiah (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Minari (2020).jpg">
+                                <br>Minari (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Sound of Metal (2019).jpg">
+                                <br>
+                                Sound of Metal (2019)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/The Father (2020).jpg">
+                                <br>
+                                The Father (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/The Shawshank Redemption.jpg">
+                                <br>
+                                The Shawshank Redemption
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Forrest Gump.jpg">
+                                <br>Forrest Gump
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Judas and the Black Messiah (2021).jpg">
+                                <br>Judas and the Black Messiah (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Minari (2020).jpg">
+                                <br>Minari (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/Sound of Metal (2019).jpg">
+                                <br>
+                                Sound of Metal (2019)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/The Father (2020).jpg">
+                                <br>
+                                The Father (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Drama/The Shawshank Redemption.jpg">
+                                <br>
+                                The Shawshank Redemption
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Romance
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/A Walk to Remember.jpg">
+                                <br>A Walk to Remember
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Eternal Sunshine of the Spotless Mind.jpg">
+                                <br>Eternal Sunshine of the Spotless Mind
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Sylvie's Love (2020).jpg">
+                                <br>Sylvie's Love (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/The Half of It (2020).jpg">
+                                <br>
+                                The Half of It (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/The Notebook.jpg">
+                                <br>
+                                The Notebook
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Titanic.jpg">
+                                <br>
+                                Titanic
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/A Walk to Remember.jpg">
+                                <br>A Walk to Remember
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Eternal Sunshine of the Spotless Mind.jpg">
+                                <br>Eternal Sunshine of the Spotless Mind
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Sylvie's Love (2020).jpg">
+                                <br>Sylvie's Love (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/The Half of It (2020).jpg">
+                                <br>
+                                The Half of It (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/The Notebook.jpg">
+                                <br>
+                                The Notebook
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Romance/Titanic.jpg">
+                                <br>
+                                Titanic
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Horror
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/A Quiet Place Part II (2021).jpg">
+                                <br>A Quiet Place Part II (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/Hereditary.jpg">
+                                <br>Hereditary
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Conjuring.jpg">
+                                <br>The Conjuring
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Exorcist.jpg">
+                                <br>
+                                The Exorcist
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Invisible Man (2020).jpg">
+                                <br>
+                                The Invisible Man (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Nun.jpg">
+                                <br>
+                                The Nun
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/A Quiet Place Part II (2021).jpg">
+                                <br>A Quiet Place Part II (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/Hereditary.jpg">
+                                <br>Hereditary
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Conjuring.jpg">
+                                <br>The Conjuring
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Exorcist.jpg">
+                                <br>
+                                The Exorcist
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Invisible Man (2020).jpg">
+                                <br>
+                                The Invisible Man (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Horror/The Nun.jpg">
+                                <br>
+                                The Nun
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Comedy
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Borat Subsequent Moviefilm (2020).jpg">
+                                <br>Borat Subsequent Moviefilm (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Coming 2 America (2021).jpg">
+                                <br>Coming 2 America (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Don't Look Up (2021).jpg">
+                                <br>Don't Look Up (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Free Guy (2021).jpg">
+                                <br>
+                                Free Guy (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Superbad.jpg">
+                                <br>
+                                Superbad
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/The Hangover.jpg">
+                                <br>
+                                The Hangover
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Borat Subsequent Moviefilm (2020).jpg">
+                                <br>Borat Subsequent Moviefilm (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Coming 2 America (2021).jpg">
+                                <br>Coming 2 America (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Don't Look Up (2021).jpg">
+                                <br>Don't Look Up (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Free Guy (2021).jpg">
+                                <br>
+                                Free Guy (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/Superbad.jpg">
+                                <br>
+                                Superbad
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Comedy/The Hangover.jpg">
+                                <br>
+                                The Hangover
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Animation
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Encanto.jpg">
+                                <br>Encanto
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Luca.jpg">
+                                <br>Luca
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Over the Moon (2020).jpg">
+                                <br>Over the Moon (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Raya and the Last Dragon.jpg">
+                                <br>
+                                Raya and the Last Dragon
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/The Mitchells vs. The Machines.jpg">
+                                <br>
+                                The Mitchells vs. The Machines
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Toy Story.jpg">
+                                <br>
+                                Toy Story
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Encanto.jpg">
+                                <br>Encanto
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Luca.jpg">
+                                <br>Luca
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Over the Moon (2020).jpg">
+                                <br>Over the Moon (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Raya and the Last Dragon.jpg">
+                                <br>
+                                Raya and the Last Dragon
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/The Mitchells vs. The Machines.jpg">
+                                <br>
+                                The Mitchells vs. The Machines
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Animation/Toy Story.jpg">
+                                <br>
+                                Toy Story
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+        <tr>
+            <td class="tag">Fantasy
+                <hr class="line">
+                <table class="table" border="0">
+                    <th>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/Harry Potter and the Sorcerer's Stone.jpg">
+                                <br>Harry Potter and the Sorcerer's Stone
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Green Knight (2021).jpg">
+                                <br>The Green Knight (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The King's Man (2021).jpg">
+                                <br>The King's Man (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Lord of the Rings The Fellowship of the Ring.jpg">
+                                <br>
+                                The Lord of the Rings The Fellowship of the Ring
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Witcher Nightmare of the Wolf (2021).jpg">
+                                <br>
+                                The Witcher Nightmare of the Wolf (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/Wonder Woman 1984 (2020).jpg">
+                                <br>
+                                Wonder Woman 1984 (2020)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/Harry Potter and the Sorcerer's Stone.jpg">
+                                <br>Harry Potter and the Sorcerer's Stone
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Green Knight (2021).jpg">
+                                <br>The Green Knight (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The King's Man (2021).jpg">
+                                <br>The King's Man (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Lord of the Rings The Fellowship of the Ring.jpg">
+                                <br>
+                                The Lord of the Rings The Fellowship of the Ring
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/The Witcher Nightmare of the Wolf (2021).jpg">
+                                <br>
+                                The Witcher Nightmare of the Wolf (2021)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="filmCard">
+                                <img src="Image/Fantasy/Wonder Woman 1984 (2020).jpg">
+                                <br>
+                                Wonder Woman 1984 (2020)
+                            </div>
+                        </td>
+                    </th>
+                </table></td>
+        </tr>
+    </table>
+
+    <script>
+
+        function openPlayer() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('search').style.display = 'none';
+            document.getElementById('Medialayer').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('Medialayer').style.display = 'none';
+            document.getElementById('search').style.display = 'none';
+        }
+
+        function selectFilm(element,imageSrc,name) {
+            var containers = document.getElementsByClassName('film');
+            for (var i = 0; i < containers.length; i++) {
+                containers[i].classList.remove('selected');
+            }
+            element.classList.add('selected');
+            document.getElementById('filmname').innerText=name;
+            document.getElementById('popupImage').src = imageSrc;
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+    </script>  
+    <script src="home.js"></script>
+</body>
+</html>

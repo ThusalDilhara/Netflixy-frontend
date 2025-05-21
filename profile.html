@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <title>NETFLEXY Home Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body style="background-image: url('Image/g1.webp');">
+    <div class="top-area">
+        <div class="NETFLEXY">NETFLEXY</div>
+    <div class="profile">
+        <a href="home Page.html"><button class="signIn-button">Home</button></a>
+    </div>
+
+    <div id="container1" class="container active">
+        <div id="getmemberdetails" class="RegisterContainer">
+            <p><h2>My profile</h2>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td><label for="name">Name</label></td>
+                                <td><div class="field" id="viewName"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="age">Age</label></td>
+                                <td><div class="field" id="viewAge"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="country">Country</label></td>
+                                <td><div class="field" id="viewCountry"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="interest">Interest</label></td>
+                                <td>
+                                    <div class="field" id="viewOption"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email</label></td>
+                                <td><div class="field" id="viewEmail"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password">Password</label></td>
+                                <td><div class="field" id="viewPassword"></div></td>
+                            </tr>
+                            <tr>
+                                
+                                <td><a href="LogIn Page.html"><button class="savebutton">Sign Out</button></a></td>
+                                <td>
+                                    <input type="submit" value="Edit" class="signIn-button"  
+                                    onclick="showContainer('container2',this)">
+                                    <input type="submit" id="deleteButton" value="Delete Account" class="signIn-button"  
+                                    onclick="showContainer('container3',this)">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div id="container2" class="container">
+        <div id="editmemberdetails" class="RegisterContainer">
+            <p><h2>My profile</h2>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td><label for="name">Name</label></td>
+                                <td><input class="textfieldStyle" id="editname" type="text" name="name"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="age">Age</label></td>
+                                <td><input class="textfieldStyle" id="editage" type="number" name="age"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="country">Country</label></td>
+                                <td><input class="textfieldStyle" id="editcountry" type="text" name="country"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="interest">Interest</label></td>
+                                <td>
+                                    <select class="textfieldStyle" id="editinterest" name="interest">
+                                        <option  value="Action">Action</option>
+                                        <option  value="Animation">Animation</option>
+                                        <option  value="Comedy">Comedy</option>
+                                        <option  value="Drama">Drama</option>
+                                        <option  value="Fantasy">Fantasy</option>
+                                        <option  value="Horror">Horror</option>
+                                        <option  value="Romance">Romance</option>
+                                        <option  value="Thriller">Thriller</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email</label></td>
+                                <td><input class="textfieldStyle" id="editemail" type="text" name="email"></div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password">Password</label></td>
+                                <td><input class="textfieldStyle" id="editpassword" type="email" name="password" readonly></td>
+                            </tr>
+                            <tr>
+                                <td><label for="confirmpassword">Confirm Password</label></td>
+                                <td><input class="textfieldStyle" type="text" name="password" placeholder="Confirm Password"></td>
+                            </tr>
+                            <tr>
+                                
+                                <td></td>
+                                <td>
+                                    <input type="button" id="saveButton" value="Save" class="signIn-button"  
+                                    onclick="showContainer('container1',this)">
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div id="container3" class="container">
+        <div class="registerSuccess">
+            Account Deleted
+            <br>
+            successful..!
+            <br>
+            <span style="font-size: 80px; color: #dadada; padding: 350px;">
+                <img src="Image/correct.png" width="80px" height="80px"></span>
+                <br>
+                <span style="font-size: 80px; color: #dadada; padding: 310px;">
+                    <a href="LogIn Page.html"><button class="signIn-button">
+                        <span style="font-size: 20px;">Sign In</span></button></a></span>
+        </div>
+    </div>
+
+    <div class="box"></div>
+    <script>
+        function showContainer(containerId, button) {
+            var containers = document.querySelectorAll('.container');
+            containers.forEach(function(container) {
+                container.classList.remove('active');
+            });
+            var activeContainer = document.getElementById(containerId);
+            activeContainer.classList.add('active');
+            var buttons = document.querySelectorAll('.button');
+            buttons.forEach(function(btn) {
+                if (btn !== button) {
+                    btn.classList.remove('clicked');
+                }
+            });
+            button.classList.toggle('clicked');
+        }
+    </script>
+
+<script src="profile.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <title>NETFLEXY Sign In Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body style="background-image: url('Image/signInBg.webp');">
+    <div class="NETFLEXY">NETFLEXY</div>
+    <div class="profile">
+        <button class="signIn-button" onclick="showAddContent()">Manage Content</button>
+    </div>
+
+    <div id="addContent" class="addContent">
+        <h2>Add A Content</h2>
+        <br>
+        <form action="" id="addContent">
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td><label for="name">Film Name</label></td>
+                        <td><input class="textfieldStyle" type="text"  id="filmName" placeholder="Film name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="interest">Category</label></td>
+                        <td>
+                            <select class="textfieldStyle" id="filmC" name="interest" required>
+                                <option  value="" disabled selected>Select you favorite</option>
+                                <option  value="Action">Action</option>
+                                <option  value="Animation">Animation</option>
+                                <option  value="Comedy">Comedy</option>
+                                <option  value="Drama">Drama</option>
+                                <option  value="Fantasy">Fantasy</option>
+                                <option  value="Horror">Horror</option>
+                                <option  value="Romance">Romance</option>
+                                <option  value="Thriller">Thriller</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Image URL</label></td>
+                        <td><input class="textfieldStyle" type="text"  id="imageURL" placeholder="Film name" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td>
+                            <input type="submit" value="Add" class="signIn-button">
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form><br>
+        <a href="LogIn Page.html"><button class="savebutton">Cancel</button></a>
+        
+        
+     </div>
+
+
+    <div id="window" class="signIn">
+        <p><h2>Sign In</h2>
+            <form action="" id="loginForm">
+                <input class="textfieldStyle" id="email" type="text" name="email" placeholder="Enter email" required>
+                <br>
+                <br>
+                <input class="textfieldStyle" id="password" type="password" name="password" placeholder="Enter password" required>
+                <br>
+                <br>
+                <br>
+                <button type="submit" class="signIn-button">Sign In</button> 
+            </form>
+            
+                <br>
+            <br>
+            Forgot password ? <a href="#blank" style="color: #1C9B99;">Click Here</a>
+            <br><br>
+            New to NETFLIXY ?<a href="Register Page.html"  style="color: #1C9B99;"> Sign up now</a> 
+
+        </p>
+    </div>
+    <script src="login.js">
+       
+    </script>
+    <script src="content.js">
+       
+    </script>
+</body>
+</html>
